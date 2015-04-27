@@ -11,8 +11,8 @@ used to handle the search request. It accepts values such as `_primary`,
 http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-request-preference.html[search `preference`]
 documentation page.
 
-However, the most generally useful value is some arbitrary string, to avoid
-the _bouncing results_ problem.((("bouncing results problem")))
+**However, the most generally useful value is some arbitrary string, to avoid
+the _bouncing results_ problem.**((("bouncing results problem")))
 
 [[bouncing-results]]
 .Bouncing Results
@@ -92,9 +92,9 @@ GET /_search?search_type=count
 
 `count`::
 
-The `count` search type has only a `query` phase.((("count search type")))  It can be used when you
+**The `count` search type has only a `query` phase.((("count search type")))  It can be used when you
 don't need search results, just a document count or
-<<aggregations,aggregations>> on documents matching the query.
+<<aggregations,aggregations>> on documents matching the query.**
 
 `query_and_fetch`::
 
