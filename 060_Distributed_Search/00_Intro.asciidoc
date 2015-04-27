@@ -30,5 +30,5 @@ we're interested in to see if they have any matching documents.
 
 But finding all matching documents is only half the story. Results from
 multiple shards must be combined into a single sorted list before the `search`
-API can return a ``page'' of results. For this reason, search is executed in a
-two-phase process called _query then fetch_.
+API can return a ``page'' of results. ***For this reason, search is executed in a
+two-phase process called _query then fetch_.***
