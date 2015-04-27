@@ -1,16 +1,16 @@
 [[scan-scroll]]
 === scan and scroll
 
-The `scan` search type and the `scroll` API((("scroll API", "scan and scroll"))) are used together to retrieve
+**The `scan` search type and the `scroll` API((("scroll API", "scan and scroll"))) are used together to retrieve
 large numbers of documents from Elasticsearch efficiently, without paying the
-penalty of deep pagination.
+penalty of deep pagination.**
 
 `scroll`::
 +
 --
-A _scrolled search_ allows us to((("scrolled search"))) do an initial search and to keep pulling
+**A _scrolled search_ allows us to((("scrolled search"))) do an initial search and to keep pulling
 batches of results from Elasticsearch until there are no more results left.
-It's a bit like a _cursor_ in ((("cursors")))a traditional database.
+It's a bit like a _cursor_ in ((("cursors")))a traditional database.**
 
 A scrolled search takes a snapshot in time. It doesn't see any changes that
 are made to the index after the initial search request has been made. It does
@@ -21,11 +21,11 @@ on what the index looked like at the time it started.
 
 `scan`::
 
-The costly part of deep pagination is the global sorting of results, but if we
+**The costly part of deep pagination is the global sorting of results, but if we
 disable sorting, then we can return all documents quite cheaply. To do this, we
 use the `scan` search type.((("scan search type"))) Scan instructs Elasticsearch to do no sorting, but
 to just return the next batch of results from every shard that still has
-results to return.
+results to return.**
 
 To use _scan-and-scroll_, we execute a search((("scan-and-scroll"))) request setting `search_type` to((("search_type", "scan and scroll")))
 `scan`, and passing a `scroll` parameter telling Elasticsearch how long it
